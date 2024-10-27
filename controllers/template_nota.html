@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nota Order</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin: 5px 0;
+      }
+
+      .info {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 5px;
+      }
+
+      .right-align {
+        text-align: right;
+      }
+
+      .total {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .summary {
+        margin-top: 10px;
+      }
+
+      .summary td {
+        padding: 2px 5px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px dashed #000;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Caffe Wikusama</h1>
+    <div class="info">
+      <p>Jl. Danau Ranau, Sawojajar, Kec. Kedungkandang, Kota Malang</p>
+      <p>No.Telp 0812-2348-8999</p>
+    </div>
+    <hr />
+    <table>
+      <tr>
+        <td>Order Id:</td>
+        <td class="right-align">{{id_order}}</td>
+      </tr>
+      <tr>
+        <td>Tanggal:</td>
+        <td class="right-align">{{tgl_order}}</td>
+      </tr>
+      <tr>
+        <td>Nomor Meja:</td>
+        <td class="right-align">{{nomor_meja}}</td>
+      </tr>
+      <tr>
+        <td>Nama Pelanggan:</td>
+        <td class="right-align">{{nama_pelanggan}}</td>
+      </tr>
+      <tr>
+        <td>Kasir:</td>
+        <td class="right-align">{{nama_kasir}}</td>
+      </tr>
+    </table>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th class="right-align">Qty</th>
+          <th class="right-align">Harga</th>
+          <th class="right-align">SubTotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{Items}}
+      </tbody>
+    </table>
+    <hr />
+    <div class="summary">
+      <table>
+        <tr>
+          <td>Total Qty</td>
+          <td class="right-align">{{Total_Qty}}</td>
+        </tr>
+        <tr class="total">
+          <td>Total</td>
+          <td class="right-align">{{Total}}</td>
+        </tr>
+        <tr>
+          <td>Terbayar</td>
+          <td class="right-align">{{Terbayar}}</td>
+        </tr>
+        <tr>
+          <td>Kembali</td>
+          <td class="right-align">{{Kembali}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="info">
+      <br>
+      <br>
+      <p>* Terima Kasih Atas Kunjungan Anda *</p>
+    </div>
+  </body>
+</html>

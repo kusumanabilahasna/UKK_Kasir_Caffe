@@ -1,0 +1,5 @@
+user :
+    - admin : #username: LiseLise, #password: Elisee01
+    - kasir : - #username: Scarlettt, #password: Scarlet01
+              - #username: Cecilia, #password: Celiaa01
+    - manajer : #username: HaHades, #password: Hadess01
